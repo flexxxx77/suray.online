@@ -28,7 +28,7 @@ export default function Home() {
           className="w-24 h-24 object-contain"
         />
         <p className="text-xl font-semibold text-gray-800 dark:text-white mt-4">
-          ЭЕШ Монгол хэл <br /> 2023–2025
+        Хэл бичгийн шалгалт<br /> 2023–2025
         </p>
       </Link>
 
