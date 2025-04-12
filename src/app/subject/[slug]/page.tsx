@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import React, {  use } from "react";
 
 type PageProps = {
   params: {
@@ -34,8 +35,10 @@ const data = {
   },
 };
 
-export default function SubjectPage({ params }: PageProps) {
-  const subjectData = data[params.slug as keyof typeof data];
+export default function SubjectPage({ params }: { params: Promise<{ slug: string }> }){
+  const { slug } = use(params);
+
+  const subjectData = data[slug as keyof typeof data];
   if (!subjectData) return notFound();
 
   return (
