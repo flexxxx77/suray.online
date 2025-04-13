@@ -10,7 +10,7 @@ export default function FeedbackPage() {
       className="max-w-xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg space-y-4 text-white"
     >
       <h1 className="text-2xl font-bold">Санал хүсэлт</h1>
-      <p className="text-sm text-gray-300">Сайтын талаар таны бодол бидэнд чухал байна.</p>
+      <p className="text-sm text-gray-300">Сайтын талаар таны бодол бидэнд чухал байна</p>
 
       <div>
         <label className="block text-sm font-medium mb-1">Таны нэр</label>
