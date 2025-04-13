@@ -9,7 +9,7 @@ type PageProps = {
 
 const data = {
   alevel: {
-    title: "Хэл бичгийн шалгалт 2023–2025",
+    title: "Хэл бичгийн шалгалт ",
     topics: [
       { code: "P1", img: "/cover.jpg", 
         link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },

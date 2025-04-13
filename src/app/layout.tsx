@@ -25,14 +25,14 @@ export default function RootLayout({
             <Link href="/about" className="hover:text-blue-500 dark:hover:text-yellow-300 transition">
               About Us
             </Link>
-            <Link href="/contact" className="hover:text-blue-500 dark:hover:text-yellow-300 transition">
-              Contact
+            <Link href="/feedback" className="hover:text-blue-500 dark:hover:text-yellow-300 transition">
+              Санал хүсэлт
             </Link>
           </nav>
         </header>
 
         {/* ⚡ Animated Gradient Background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-yellow-100 via-pink-100 to-white dark:from-gray-800 dark:via-gray-900 dark:to-black transition-all duration-500" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-yellow-100 via-pink-100 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-950" />
 
         {/* 📦 Page Content */}
         <main className="pt-20 px-4">{children}</main>

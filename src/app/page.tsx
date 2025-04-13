@@ -28,13 +28,13 @@ export default function Home() {
           className="w-24 h-24 object-contain"
         />
         <p className="text-xl font-semibold text-gray-800 dark:text-white mt-4">
-        Хэл бичгийн шалгалт<br /> 2023–2025
+        Хэл бичгийн тест<br /> 
         </p>
       </Link>
 
       {/* 🫶 Trust Quote */}
       <div className="text-sm text-gray-500 dark:text-gray-400">
-        <p>"Бид одоо цагт хийж ирээдүйг бүтээнэ."</p>
+        <p>"Бид одоо цагт хийж ирээдүйг бүтээнэ"</p>
       </div>
     </section>
   );
