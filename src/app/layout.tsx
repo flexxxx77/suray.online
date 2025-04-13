@@ -4,7 +4,7 @@ import Navbar from "@/components/NavBar";
 
 
 export const metadata: Metadata = {
-  title: "Suray.mn",
+  title: "Suray.online",
   description: "ЭЕШ Монгол хэлний тестүүд - Suray.mn",
 };
 
