@@ -1,4 +1,4 @@
-// app/about/page.tsx
+import { Mail } from "lucide-react";
 
 export default function About() {
   return (
@@ -18,10 +18,15 @@ export default function About() {
         <p className="mt-2">
           Монгол хэл бичгийн шалгалтад бэлтгэхэд зориулсан чанартай, үнэ төлбөргүй, хүртээмжтэй цахим орчинг бүх сурагч, шалгуулагчдад бий болгох. Бид боловсрол бол хүн бүрийн эрхэм эрх гэж итгэдэг. Тиймээс Suray.online платформ нь сурагч бүрийн амжилтад хүрэх замын эхлэл болно гэдэгт бид бүрэн итгэлтэй байна.
         </p>
-        <p className="text-sm text-center text-gray-400 mt-8">
-            Вэбсайтыг бүтээсэн: 21-р сургууль, 11а анги — Очир-Эрдэнэ (<a href="mailto:ochrooto1@gmail.com" className="underline">ochrooto1@gmail.com</a>)
-        </p>
 
+        <p className="text-sm text-center text-gray-400 mt-8 flex items-center justify-center gap-2">
+          <Mail size={16} className="text-gray-400" />
+          Вэбсайтыг бүтээсэн: 21-р сургууль, 11а анги — Очир-Эрдэнэ (
+          <a href="mailto:ochrooto1@gmail.com" className="underline hover:text-yellow-400">
+            ochrooto1@gmail.com
+          </a>
+          )
+        </p>
       </div>
     </main>
   );
