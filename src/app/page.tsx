@@ -43,7 +43,7 @@ export default function Home() {
           </a>
           <a
             href="mailto:suray.online.edu@gmail.com"
-            target="_blank"
+            target="_suray.online.edu@gmail.com"
             rel="noopener noreferrer"
           >
             <Mail className="w-6 h-6 text-red-600 hover:text-red-800 transition" />
