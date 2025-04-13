@@ -85,17 +85,14 @@ export default function SubjectPage({
         {subjectData.topics.map(({ code, img, link }) => (
           <div
             key={code}
-            className="w-72 h-[420px] bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-105 p-4 flex flex-col items-center"
+            className="w-72 h-[500px] bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-105 p-4 flex flex-col items-center"
           >
             <img
               src={img}
               alt={code}
-              className="w-full h-52 object-cover rounded-xl mb-4"
+              className="w-full h-80 object-cover rounded-xl mb-4"
             />
             <h2 className="text-xl font-semibold text-white">{code}</h2>
-
-            {/* Хассан хэсэг (тайлбар) */}
-            {/* <p className="text-sm text-gray-400 mb-4">{subjectData.title}</p> */}
 
             <a
               href={link}

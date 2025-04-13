@@ -17,7 +17,7 @@ export default function Navbar() {
         <Link href="/about" className="hover:underline text-black dark:text-white">
           About Us
         </Link>
-        <Link href="/contact" className="hover:underline text-black dark:text-white">
+        <Link href="/feedback" className="hover:underline text-black dark:text-white">
           Санал хүсэлт
         </Link>
       </div>
