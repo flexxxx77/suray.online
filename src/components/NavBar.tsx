@@ -3,17 +3,17 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between px-4 py-3 bg-white dark:bg-black shadow">
-      <Link href="/" className="flex items-center space-x-2">
+    <nav className="w-full flex items-center justify-between px-4 py-3 bg-white dark:bg-black shadow fixed top-0 z-50">
+      <Link href="/" className="flex items-center">
         <Image
-          src="/logo.png"
+          src="/logo.jpg"
           alt="Suray.mn logo"
-          width={150}
-          height={50}
-          className="h-10 object-contain"
+          width={160}
+          height={48}
+          className="object-contain"
         />
       </Link>
-      <div className="flex items-center space-x-4 text-sm">
+      <div className="flex items-center space-x-6 text-sm font-medium">
         <Link href="/about" className="hover:underline text-black dark:text-white">
           About Us
         </Link>

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import React, {  use } from "react";
+import React, { use } from "react";
 
 type PageProps = {
   params: {
@@ -11,31 +11,65 @@ const data = {
   alevel: {
     title: "Хэл бичгийн шалгалт ",
     topics: [
-      { code: "P1", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P2", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P3", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P4", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P5", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P6", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P7", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P8", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P9", img: "/cover.jpg", 
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-      { code: "P10", img: "/cover.jpg",
-         link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
+      {
+        code: "P1",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P2",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P3",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P4",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P5",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P6",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P7",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P8",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P9",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
+      {
+        code: "P10",
+        img: "/cover.jpg",
+        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      },
     ],
   },
 };
 
-export default function SubjectPage({ params }: { params: Promise<{ slug: string }> }){
+export default function SubjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = use(params);
 
   const subjectData = data[slug as keyof typeof data];
@@ -59,7 +93,10 @@ export default function SubjectPage({ params }: { params: Promise<{ slug: string
               className="w-full h-52 object-cover rounded-xl mb-4"
             />
             <h2 className="text-xl font-semibold text-white">{code}</h2>
-            <p className="text-sm text-gray-400 mb-4">{subjectData.title}</p>
+
+            {/* Хассан хэсэг (тайлбар) */}
+            {/* <p className="text-sm text-gray-400 mb-4">{subjectData.title}</p> */}
+
             <a
               href={link}
               target="_blank"
