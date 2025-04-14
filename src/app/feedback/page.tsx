@@ -1,118 +1,64 @@
 "use client";
 
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 
-export default function FeedbackForm() {
-  const form = useRef<HTMLFormElement | null>(null);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!form.current) return;
-
-    emailjs
-      .sendForm(
-        "service_7ypj80q",
-        "template_m712dut",
-        form.current,
-        "5SQifsW93f9FflQ4H"
-      )
-      .then(
-        (result) => {
-          console.log("Success:", result.text);
-          alert("Амжилттай илгээгдлээ!");
-          form.current?.reset();
-        },
-        (error) => {
-          console.log("Error:", error.text);
-          alert("Алдаа гарлаа! Дахин оролдоно уу.");
-        }
-      );
-  };
-
+export default function FeedbackPage() {
   return (
-    <form
-      ref={form}
-      onSubmit={sendEmail}
-      style={{
-        maxWidth: "500px",
-        margin: "50px auto",
-        padding: "30px",
-        background: "#ffffffcc",
-        borderRadius: "12px",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
-        fontFamily: "sans-serif",
-      }}
-    >
-      <h2 style={{ textAlign: "center", marginBottom: "20px", color: "#2c3e50" }}>
-        Санал хүсэлт
-      </h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-100 via-pink-100 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-950 px-4">
+      <div className="w-full max-w-md p-6 rounded-xl shadow-xl bg-blue-100 dark:bg-blue-900">
+        <h2 className="text-center text-xl font-semibold text-gray-800 dark:text-white mb-6">
+          Санал хүсэлт
+        </h2>
 
-      <label style={{ display: "block", marginBottom: "5px" }}>Нэр:</label>
-      <input
-        type="text"
-        name="name"
-        required
-        placeholder="Таны нэр"
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "15px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-        }}
-      />
+        <form className="space-y-5">
+          {/* Нэр */}
+          <div>
+            <label htmlFor="name" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
+              Нэр:
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Таны нэр"
+            />
+          </div>
 
-      <label style={{ display: "block", marginBottom: "5px" }}>Имэйл:</label>
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="email@example.com"
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "15px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-        }}
-      />
+          {/* Имэйл */}
+          <div>
+            <label htmlFor="email" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
+              Имэйл:
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="email@example.com"
+            />
+          </div>
 
-      <label style={{ display: "block", marginBottom: "5px" }}>Зурвас:</label>
-      <textarea
-        name="message"
-        required
-        placeholder="Санал хүсэлтээ энд бичнэ үү..."
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "20px",
-          height: "120px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          resize: "vertical",
-        }}
-      />
+          {/* Зурвас */}
+          <div>
+            <label htmlFor="message" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
+              Зурвас:
+            </label>
+            <textarea
+              id="message"
+              rows={4}
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Санал хүсэлтээ энд бичнэ үү..."
+            ></textarea>
+          </div>
 
-      <button
-        type="submit"
-        style={{
-          width: "100%",
-          padding: "12px",
-          backgroundColor: "#2c3e50",
-          color: "white",
-          fontWeight: "bold",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-          transition: "background-color 0.3s",
-        }}
-        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#1a242f")}
-        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#2c3e50")}
-      >
-        Илгээх
-      </button>
-    </form>
+          {/* Илгээх товч */}
+          <button
+            type="submit"
+            className="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-900 transition"
+          >
+            Илгээх
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
