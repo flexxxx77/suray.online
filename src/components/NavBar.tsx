@@ -15,7 +15,7 @@ export default function Navbar() {
       </Link>
       <div className="flex items-center space-x-6 text-sm font-medium">
         <Link href="/about" className="hover:underline text-black">
-          About Us
+        Бидний Тухай
         </Link>
         <Link href="/feedback" className="hover:underline text-black">
           Санал хүсэлт
