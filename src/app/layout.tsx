@@ -1,7 +1,12 @@
+"use client";
+
 import "./globals.css";
 import { Metadata } from "next";
-import Script from "next/script"; 
+import Script from "next/script";
 import Navbar from "@/components/NavBar";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { pageview } from "@/app/lib/gtag";
 
 export const metadata: Metadata = {
   title: "Suray.online",
@@ -13,6 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname) {
+      pageview(pathname);
+    }
+  }, [pathname]);
+
   return (
     <html lang="mn" suppressHydrationWarning>
       <head>

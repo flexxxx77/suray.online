@@ -1,9 +1,39 @@
+"use client";
+
 import Link from "next/link";
 import { GraduationCapIcon } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { Mail } from "lucide-react";
+import { event } from "@/app/lib/gtag";
 
 export default function Home() {
+  const handleCardClick = () => {
+    event({
+      action: "click_button",
+      category: "navigation",
+      label: "A-Level Card",
+      value: 1,
+    });
+  };
+
+  const handleInstagramClick = () => {
+    event({
+      action: "click_button",
+      category: "social",
+      label: "Instagram Link",
+      value: 1,
+    });
+  };
+
+  const handleEmailClick = () => {
+    event({
+      action: "click_button",
+      category: "contact",
+      label: "Email Link",
+      value: 1,
+    });
+  };
+
   return (
     <section className="flex flex-col items-center justify-center text-center space-y-10">
       {/* 🟣 Title */}
@@ -18,6 +48,7 @@ export default function Home() {
       <Link
         href="/subject/alevel"
         className="group w-80 h-80 p-6 bg-white dark:bg-gray-800 border-4 border-blue-300 rounded-3xl shadow-2xl hover:scale-105 transform transition-all duration-300 flex flex-col items-center justify-between"
+        onClick={handleCardClick}
       >
         <GraduationCapIcon className="w-12 h-12 text-blue-600 group-hover:text-pink-500 transition" />
         <img
@@ -38,13 +69,15 @@ export default function Home() {
             href="https://www.instagram.com/suray.online?igsh=MWtlcGpqa3l1dzF2dw%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleInstagramClick}
           >
             <FaInstagram className="w-6 h-6 text-pink-600 hover:text-pink-800 transition" />
           </a>
           <a
             href="mailto:suray.online.edu@gmail.com"
-            target="_suray.online.edu@gmail.com"
+            target="_blank"
             rel="noopener noreferrer"
+            onClick={handleEmailClick}
           >
             <Mail className="w-6 h-6 text-red-600 hover:text-red-800 transition" />
           </a>

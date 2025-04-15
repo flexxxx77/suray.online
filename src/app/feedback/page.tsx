@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { event } from "@/app/lib/gtag"; // 📌 импорт нэмэгдсэн хэсэг
 
 export default function FeedbackPage() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -14,15 +15,23 @@ export default function FeedbackPage() {
 
     emailjs
       .sendForm(
-        "service_7ypj80q",       
-        "template_m712dut",      
+        "service_7ypj80q",
+        "template_m712dut",
         form.current,
-        "5SQifsW93f9FflQ4H"      
+        "5SQifsW93f9FflQ4H"
       )
       .then(
         () => {
           setIsSent(true);
           form.current?.reset();
+
+          // 🎯 GA Event Tracking
+          event({
+            action: "submit_form",
+            category: "feedback",
+            label: "Feedback Form",
+            value: 1,
+          });
         },
         (error) => {
           console.error("Error:", error.text);
