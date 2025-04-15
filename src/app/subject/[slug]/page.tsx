@@ -49,7 +49,7 @@ const data = {
       {
         code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар A",
         img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        link: "https://eec.mn/wp-content/uploads/2022/08/A-22..pdf",
       },
       {
         code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар B",
