@@ -9,57 +9,57 @@ type PageProps = {
 
 const data = {
   alevel: {
-    title: "Хэл бичгийн шалгалт ",
+    title: "Хэл бичгийн шалгалт тест ",
     topics: [
       {
-        code: "P1",
+        code: "Үүр Хувилбар А",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-А-хувилбар.pdf",
+      },
+      {
+        code: "Үүр Хувилбар B",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-B-хувилбар.pdf",
+      },
+      {
+        code: "Үүр Хувилбар C ",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-C-хувилбар.pdf",
+      },
+      {
+        code: "Үүр Хувилбар D",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-D-хувилбар.pdf",
+      },
+      {
+        code: "Усанд явахад Хувилбар А",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/01/2023-МХБШ-А.pdf",
+      },
+      {
+        code: "Усанд явахад Хувилбар В",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2024/01/2023-МХБШ-В.pdf",
+      },
+      {
+        code: "ТАЛ Хувилбар A",
+        img: "/cover.jpg",
+        link: "https://eec.mn/wp-content/uploads/2022/08/B-22..pdf",
+      },
+      {
+        code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар A",
         img: "/cover.jpg",
         link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
       },
       {
-        code: "P2",
+        code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар B",
         img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        link: "https://eec.mn/wp-content/uploads/2022/08/C-22..pdf",
       },
       {
-        code: "P3",
+        code: "ТАЛ Хувилбар B",
         img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P4",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P5",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P6",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P7",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P8",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P9",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      },
-      {
-        code: "P10",
-        img: "/cover.jpg",
-        link: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        link: "https://eec.mn/wp-content/uploads/2022/08/D-22..pdf",
       },
     ],
   },
