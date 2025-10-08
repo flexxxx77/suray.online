@@ -12,57 +12,63 @@ const data = {
     title: "Хэл бичгийн шалгалт тест ",
     topics: [
       {
-        code: "Үүр Хувилбар А",
+        code: "Гагнаас Хувилбар А-2016",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-А-хувилбар.pdf",
+        link: "https://drive.google.com/file/d/1zBpgJ_pfeZSDH9POmJBZDCkMYPsKohyY/view?usp=sharing",
       },
       {
-        code: "Үүр Хувилбар B",
+        code: "Гагнаас Хувилбар B-2016",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-B-хувилбар.pdf",
+        link: "https://drive.google.com/file/d/1ihNkOXvzFZ0zzzFEoWoUPIwovF585NAa/view?usp=sharing",
       },
       {
-        code: "Үүр Хувилбар C ",
+        code: "Саахалтын нууранд ангир дуугарна Хувилбар A-2017",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-C-хувилбар.pdf",
+        link: "https://drive.google.com/file/d/11lHvRXSHITp7H9z-W9la6fu87Ojcy8YK/view?usp=sharing",
       },
       {
-        code: "Үүр Хувилбар D",
+        code: "Саахалтын нууранд ангир дуугарна Хувилбар B-2017",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/07/Монгол-хэл-D-хувилбар.pdf",
+        link: "https://drive.google.com/file/d/11zOws4dDZDeiRE3CxtHxU8N265ixrRtV/view?usp=sharing",
       },
       {
-        code: "Усанд явахад Хувилбар А",
+        code: "Алтан аргамж Хувилбар А-2018",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/01/2023-МХБШ-А.pdf",
+        link: "https://drive.google.com/file/d/1M38Bu3Pq7MWC5D_TKv8sQtm6gMbNqCUV/view?usp=sharing",
       },
       {
-        code: "Усанд явахад Хувилбар В",
+        code: "Алтан аргамж Хувилбар В-2018",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2024/01/2023-МХБШ-В.pdf",
+        link: "https://drive.google.com/file/d/1yh4rUB0tCAp5WK0ZcXFFD1vLGdian66Y/view?usp=sharing",
       },
       {
-        code: "ТАЛ Хувилбар A",
+        code: "Хашин бор Хувилбар A-2019",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2022/08/B-22..pdf",
+        link: "https://drive.google.com/file/d/1sgszY2Hk1kc0j61bfLQOB3eIGSosqJcd/view?usp=sharing",
       },
       {
-        code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар A",
+        code: "Хашин бор Хувилбар B-2019",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2022/08/A-22..pdf",
+        link: "https://drive.google.com/file/d/15O9rRBiNgW3AAgOqdP7TYDgHZC1qHHOS/view?usp=sharing",
       },
       {
-        code: "УРТЫН ГОЛ МИНЬ ЗҮҮДНЭЭСЭЭ СЭРЖ БАЙНА Хувилбар B",
+        code: "НҮД Хувилбар A-2022",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2022/08/C-22..pdf",
+        link: "https://drive.google.com/file/d/1FMEXFPxHEgJvVv6wsbfFgmWLnPkP9vdu/view?usp=sharing",
       },
       {
-        code: "ТАЛ Хувилбар B",
+        code: "Усанд явахад Хувилбар A-2023",
         img: "/cover.jpg",
-        link: "https://eec.mn/wp-content/uploads/2022/08/D-22..pdf",
+        link: "https://drive.google.com/file/d/1xoT_oTgvKRuC1tahaRi54_vay1y9fAAC/view?usp=sharing",
+      },
+      {
+        code: "Усанд явахад Хувилбар B-2023",
+        img: "/cover.jpg",
+        link: "https://drive.google.com/file/d/1eBm_lmeroHwLJA4ROQyUcVL6yhp102dM/view?usp=sharing",
       },
     ],
   },
+
 };
 
 export default function SubjectPage({
@@ -92,8 +98,7 @@ export default function SubjectPage({
               alt={code}
               className="w-full h-80 object-cover rounded-xl mb-4"
             />
-            <h2 className="text-xl font-semibold text-white">{code}</h2>
-
+            <h2 className="text-xl font-semibold text-white text-center">{code}</h2>
             <a
               href={link}
               target="_blank"

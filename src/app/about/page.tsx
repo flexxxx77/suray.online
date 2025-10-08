@@ -22,12 +22,12 @@ export default function About() {
         {/* Footer credit section */}
         <div className="mt-10 border-t border-gray-600 pt-6 text-center text-sm text-gray-400 space-y-1">
           <p>Вэбсайтыг бүтээсэн:</p>
-          <p>21-р сургууль, 11а анги</p>
+          <p>21-р сургууль, 12а анги</p>
           <p>Очир-Эрдэнэ</p>
           <p className="flex items-center justify-center gap-1">
             <Mail size={16} className="text-gray-400" />
             <a href="mailto:ochrooto1@gmail.com" className="underline hover:text-yellow-400">
-              ochrooto1@gmail.com
+              ochir-erdene@nit.edu.mn
             </a>
           </p>
         </div>

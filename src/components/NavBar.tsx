@@ -19,7 +19,7 @@ export default function Navbar() {
       <Link href="/" className="flex items-center">
         <Image
           src="/logo.jpg"
-          alt="Suray.mn logo"
+          alt=""
           width={160}
           height={48}
           className="object-contain"

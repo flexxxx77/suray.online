@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { GraduationCapIcon } from "lucide-react";
+import { GraduationCapIcon, Mail } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
-import { Mail } from "lucide-react";
+import { GiBrain } from "react-icons/gi"; // 🧠 ЕШ-ийн тест icon
 import { event } from "@/app/lib/gtag";
 
 export default function Home() {
-  const handleCardClick = () => {
+  const handleCardClick = (label: string) => {
     event({
       action: "click_button",
       category: "navigation",
-      label: "A-Level Card",
+      label,
       value: 1,
     });
   };
@@ -35,31 +35,43 @@ export default function Home() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center text-center space-y-10">
+    <section className="flex flex-col items-center justify-center text-center space-y-10 min-h-screen py-10 bg-gradient-to-br from-yellow-50 to-pink-100">
       {/* 🟣 Title */}
       <div>
-        <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white drop-shadow-md mb-4"></h1>
+        <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white drop-shadow-md mb-4">
+          {/* Optional main title */}
+        </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 max-w-md mx-auto">
           Хэл бичгийн шалгалтын тестүүдийг эндээс!
         </p>
       </div>
 
-      {/* 🎓 Main Card */}
-      <Link
-        href="/subject/alevel"
-        className="group w-80 h-80 p-6 bg-white dark:bg-gray-800 border-4 border-blue-300 rounded-3xl shadow-2xl hover:scale-105 transform transition-all duration-300 flex flex-col items-center justify-between"
-        onClick={handleCardClick}
-      >
-        <GraduationCapIcon className="w-12 h-12 text-blue-600 group-hover:text-pink-500 transition" />
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
-          alt="A-Level"
-          className="w-24 h-24 object-contain"
-        />
-        <p className="text-xl font-semibold text-gray-800 dark:text-white mt-4">
-          Хэл бичгийн тест<br />
-        </p>
-      </Link>
+      {/* 🎓 Cards */}
+      <div className="flex flex-col sm:flex-row gap-8">
+        {/* Хэл бичгийн тест */}
+        <Link
+          href="/subject/alevel"
+          className="group w-72 h-80 p-6 bg-white dark:bg-gray-800 border-4 border-blue-300 rounded-3xl shadow-2xl hover:scale-105 transform transition-all duration-300 flex flex-col items-center justify-between"
+          onClick={() => handleCardClick("Хэл бичгийн тест")}
+        >
+          <GraduationCapIcon className="w-10 h-10 text-blue-600 group-hover:text-pink-500 transition" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+            alt="A-Level"
+            className="w-24 h-24 object-contain"
+          />
+          <p className="text-xl font-semibold text-gray-800 dark:text-white mt-4">
+            Хэл бичгийн тест
+          </p>
+        </Link>
+
+        
+        
+        
+        
+      
+                
+      </div>
 
       {/* 🫶 Quote + Icons */}
       <div className="text-sm text-gray-500 dark:text-gray-400 flex flex-col items-center space-y-2">
